@@ -1,0 +1,1360 @@
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(http://fonts.googleapis.com/css?family=Marcellus+SC);
+                                                                                                                                               /* 
+This is the main stylesheet file. To keep things easier to read we don't actually write any css here. Instead we import a bunch of other partial files.
+In Sass a partial has the following properties:
+
+- it starts with an underscore _
+- it is not automatically processed, you have to @import it
+- if it ends with .scss then you can write normal css or write sass or a combination
+
+Also, FYI, this is an example of a comment that won't get erased or compressed when Sass creates the CSS file. Putting the ! after the opening /* tells Sass not to touch it.
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* apply a natural box layout model to all elements */
+/* line 5, ../scss/_global.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* This is not the only thing you should do for responsive images, but it is a start. Remember that this style will not make your image or video grow any bigger than the original so you have to put in the largest version you will need.
+That can be a performance issue since small screens will download the same image as large ones.
+This article by Luke Wroblewski goes into more detail about that: http://www.lukew.com/ff/entry.asp?1851
+*/
+/* line 16, ../scss/_global.scss */
+img, video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 22, ../scss/_global.scss */
+body {
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../images/00.jpg);
+}
+
+/* line 29, ../scss/_global.scss */
+p {
+  font-size: 0.9em;
+  padding-top: 0.5em;
+  line-height: 1.5em;
+}
+
+/* line 34, ../scss/_global.scss */
+header h1 {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1em;
+  font-size: 2.5em;
+  color: #fff;
+  line-height: 1.2em;
+  font-family: 'Abril Fatface';
+}
+
+@media only screen and (min-width: 45em) {
+  /* line 43, ../scss/_global.scss */
+  header h1 {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 43, ../scss/_global.scss */
+  header h1 {
+    font-size: 3em;
+  }
+}
+
+/*----------------------------
+footer styles
+-----------------------------*/
+/* line 55, ../scss/_global.scss */
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #fff;
+  margin-bottom: 0.8em;
+}
+
+@media only screen and (min-width: 45em) {
+  /* line 61, ../scss/_global.scss */
+  footer {
+    border-top: 20px solid #F99;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 61, ../scss/_global.scss */
+  footer {
+    border-top: 20px solid #F99;
+  }
+}
+
+/* line 69, ../scss/_global.scss */
+#bmcc {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  font-family: 'Abril Fatface';
+}
+
+/* line 75, ../scss/_global.scss */
+#address {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+}
+
+/* ---------------------------------
+Navigation Styles
+----------------------------------- */
+/* 
+hide 
+display:none;
+
+
+show
+display:block;
+
+*/
+/* line 15, ../scss/_navigation.scss */
+#main_nav {
+  clear: both;
+  overflow: hidden;
+}
+
+/* line 20, ../scss/_navigation.scss */
+#main_nav ul {
+  list-style: none;
+}
+
+/* line 24, ../scss/_navigation.scss */
+#main_nav li a {
+  display: block;
+  color: #FFF;
+  background-color: #F99;
+  text-transform: uppercase;
+  padding: 0.4em;
+  /* 10/16 */
+  text-decoration: none;
+  border-bottom: 1px solid;
+  font-weight: 800;
+}
+
+/* line 35, ../scss/_navigation.scss */
+#main_nav li a:hover {
+  color: #ff9840;
+  background-color: #fff;
+}
+
+/* menu button */
+/* line 41, ../scss/_navigation.scss */
+.menu a {
+  padding: 0.5em 0.625em;
+  /*10/16 */
+  background-color: #F99;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* line 48, ../scss/_navigation.scss */
+#menu-button {
+  margin-bottom: 1.5em;
+  margin-top: 1em;
+}
+
+/* line 52, ../scss/_navigation.scss */
+.top a {
+  padding: 0.5em 0.625em;
+  /*10/16 */
+  background-color: #F99;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+/* line 59, ../scss/_navigation.scss */
+.top {
+  margin-top: 3em;
+  margin-bottom: -0.75em;
+  clear: both;
+}
+
+@media only screen and (min-width: 45em) {
+  /* line 64, ../scss/_navigation.scss */
+  .top {
+    margin-bottom: -3.5em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 64, ../scss/_navigation.scss */
+  .top {
+    margin-bottom: -3.5em;
+  }
+}
+
+/* line 72, ../scss/_navigation.scss */
+.container {
+  margin-top: 1em;
+  clear: both;
+}
+
+@media only screen and (min-width: 42.75em) {
+  /* line 77, ../scss/_navigation.scss */
+  .menu {
+    display: none;
+  }
+
+  /* move main_nav to top of the screen */
+  /* line 82, ../scss/_navigation.scss */
+  #main_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #F99;
+  }
+
+  /* line 91, ../scss/_navigation.scss */
+  #main_nav li {
+    display: inline;
+    line-height: 1em;
+  }
+
+  /* line 95, ../scss/_navigation.scss */
+  #main_nav li a {
+    float: left;
+    padding: 0.9375em;
+    /* 10/16  and  15/16 */
+    border-bottom: none;
+  }
+
+  /* hide the link to top in the nav */
+  /* line 111, ../scss/_navigation.scss */
+  #main_nav li a.top {
+    display: none;
+  }
+
+  /* move the rest of the page down accordingly */
+  /* line 116, ../scss/_navigation.scss */
+  .container {
+    margin-top: 3.75em;
+    /*60 / 16 */
+  }
+}
+@media only screen and (min-width: 42.75em) and (min-width: 67.5em) {
+  /* line 100, ../scss/_navigation.scss */
+  #main_nav li a {
+    padding-left: 8em;
+  }
+}
+
+@media only screen and (min-width: 42.75em) and (min-width: 67.5em) {
+  /* line 105, ../scss/_navigation.scss */
+  a {
+    font-size: 1em;
+  }
+}
+
+/*---------------------------------
+body styles
+---------------------------------*/
+/* line 4, ../scss/pages/_index.scss */
+#index {
+  /* intrduction page*/
+  /*featuredspeakers page*/
+  /*workshop page*/
+}
+/* line 7, ../scss/pages/_index.scss */
+#index .home {
+  width: 95%;
+  /* margin:0 auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  padding: 3% 3%;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+/* line 17, ../scss/pages/_index.scss */
+#index h4 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.8em;
+  font-family: 'Marcellus SC', serif;
+  color: #309;
+}
+/* line 26, ../scss/pages/_index.scss */
+#index #intrduction {
+  background-color: #FF9;
+  font-size: 1.1em;
+}
+/* line 30, ../scss/pages/_index.scss */
+#index strong {
+  font-weight: 900;
+}
+/* line 33, ../scss/pages/_index.scss */
+#index .info {
+  padding-bottom: 1.2em;
+}
+/* line 36, ../scss/pages/_index.scss */
+#index h2 {
+  font-weight: 900;
+  line-height: 0.5em;
+  color: #f63;
+}
+/* line 43, ../scss/pages/_index.scss */
+#index #featuredspeakers {
+  background-color: #FFF;
+  overflow: hidden;
+}
+/* line 47, ../scss/pages/_index.scss */
+#index #featuredspeakers p {
+  padding-top: 1.6em;
+}
+/* line 50, ../scss/pages/_index.scss */
+#index .speaker {
+  padding-top: 0.6em;
+  padding-bottom: 4em;
+  border-bottom: 2px solid #FC6;
+}
+/* line 55, ../scss/pages/_index.scss */
+#index .wright {
+  padding-bottom: 5em;
+}
+/* line 58, ../scss/pages/_index.scss */
+#index .pallis {
+  padding-bottom: 1em;
+  border-bottom: #fff;
+}
+/* line 62, ../scss/pages/_index.scss */
+#index img {
+  float: left;
+  padding-top: 0.4em;
+  padding-right: 0.5em;
+  border-radius: 5em;
+}
+/* line 68, ../scss/pages/_index.scss */
+#index h3 {
+  color: #f63;
+  font-weight: 900;
+  text-align: center;
+}
+/* line 73, ../scss/pages/_index.scss */
+#index span {
+  font-style: italic;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+/* line 80, ../scss/pages/_index.scss */
+#index #workshop {
+  background-color: #CFC;
+  clear: both;
+  overflow: hidden;
+}
+/* line 85, ../scss/pages/_index.scss */
+#index h5 {
+  color: #f63;
+  font-weight: 900;
+  line-height: 1em;
+}
+/* line 90, ../scss/pages/_index.scss */
+#index .artItem {
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
+/* line 98, ../scss/pages/_index.scss */
+#index #intrduction {
+  overflow: hidden;
+  overflow: hidden;
+  *zoom: 1;
+  *zoom: 1;
+}
+/* line 38, ../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#index #intrduction:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media only screen and (min-width: 45em) {
+  /* line 103, ../scss/pages/_index.scss */
+  #index .info {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #index .info:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 103, ../scss/pages/_index.scss */
+  #index .info {
+    width: 33.33333%;
+    padding: 0 1%;
+    float: left;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #index .info:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 111, ../scss/pages/_index.scss */
+  #index .date {
+    padding-bottom: 1em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 111, ../scss/pages/_index.scss */
+  #index .date {
+    padding-left: 5em;
+    padding-top: 2em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 120, ../scss/pages/_index.scss */
+  #index .location {
+    padding-top: 2em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 127, ../scss/pages/_index.scss */
+  #index .speaker {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+    padding-bottom: 1.5em;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #index .speaker:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 127, ../scss/pages/_index.scss */
+  #index .speaker {
+    width: 25%;
+    padding: 0 1%;
+    float: left;
+    border-left: 2px solid #FC6;
+    border-bottom: #fff;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #index .speaker:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 138, ../scss/pages/_index.scss */
+  #index .pallis {
+    border-bottom: 2px solid #FC6;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 138, ../scss/pages/_index.scss */
+  #index .pallis {
+    border-bottom: #fff;
+    border-right: 2px solid #FC6;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 147, ../scss/pages/_index.scss */
+  #index .artItem {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #index .artItem:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 153, ../scss/pages/_index.scss */
+  #index h4 {
+    margin-bottom: 0.5em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 153, ../scss/pages/_index.scss */
+  #index h4 {
+    margin-bottom: 0.5em;
+    margin-top: -0.5em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 162, ../scss/pages/_index.scss */
+  #index h5 {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 162, ../scss/pages/_index.scss */
+  #index h5 {
+    font-size: 1.3em;
+    padding-top: 1em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 172, ../scss/pages/_index.scss */
+  #index h2 {
+    font-size: 1.25em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 177, ../scss/pages/_index.scss */
+  #index .speaker p {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 182, ../scss/pages/_index.scss */
+  #index p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 182, ../scss/pages/_index.scss */
+  #index p {
+    font-size: 1.12em;
+  }
+}
+
+/*----------------------------
+body styles
+----------------------------*/
+/* line 5, ../scss/pages/_schedule.scss */
+#schedule {
+  /*open page*/
+  /*session page*/
+  /*lunch page*/
+  /*end page*/
+}
+/* line 7, ../scss/pages/_schedule.scss */
+#schedule .schedule {
+  width: 95%;
+  /* margin:0 auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 3% 3%;
+  padding-bottom: 1em;
+  background-color: #FFF;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+/* line 19, ../scss/pages/_schedule.scss */
+#schedule header h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+/* line 23, ../scss/pages/_schedule.scss */
+#schedule h1, #schedule h5 {
+  font-weight: 900;
+  font-size: 1.3em;
+  color: #309;
+}
+/* line 30, ../scss/pages/_schedule.scss */
+#schedule #open {
+  font-weight: 900;
+  background-color: #FF9;
+}
+/* line 34, ../scss/pages/_schedule.scss */
+#schedule #open p {
+  font-size: 1em;
+}
+/* line 37, ../scss/pages/_schedule.scss */
+#schedule h2 {
+  font-weight: 900;
+  font-size: 1em;
+  color: #309;
+}
+/* line 44, ../scss/pages/_schedule.scss */
+#schedule .sessionevent a {
+  color: #000;
+}
+/* line 48, ../scss/pages/_schedule.scss */
+#schedule .schedule p span {
+  display: block;
+  font-size: 0.95em;
+  color: #f63;
+}
+/* line 53, ../scss/pages/_schedule.scss */
+#schedule h3 {
+  font-weight: 900;
+  font-size: 1em;
+  color: #309;
+}
+/* line 58, ../scss/pages/_schedule.scss */
+#schedule h3 span {
+  color: #f63;
+}
+/* line 61, ../scss/pages/_schedule.scss */
+#schedule strong {
+  font-weight: 900;
+}
+/* line 64, ../scss/pages/_schedule.scss */
+#schedule .moreinfo {
+  text-align: right;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #B95FF5;
+}
+/* line 71, ../scss/pages/_schedule.scss */
+#schedule #lunch {
+  font-weight: 900;
+  text-align: center;
+  background-color: #CFC;
+}
+/* line 76, ../scss/pages/_schedule.scss */
+#schedule #lunch p {
+  font-size: 1em;
+}
+/* line 79, ../scss/pages/_schedule.scss */
+#schedule h4 {
+  font-weight: 900;
+  font-size: 1.3em;
+  text-align: center;
+  color: #309;
+}
+/* line 87, ../scss/pages/_schedule.scss */
+#schedule #end {
+  font-weight: 900;
+  background-color: #FF9;
+}
+/* line 91, ../scss/pages/_schedule.scss */
+#schedule #end p {
+  font-size: 1em;
+}
+@media only screen and (min-width: 45em) {
+  /* line 94, ../scss/pages/_schedule.scss */
+  #schedule .schedule {
+    width: 78%;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 94, ../scss/pages/_schedule.scss */
+  #schedule .schedule {
+    width: 68%;
+    clear: both;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 104, ../scss/pages/_schedule.scss */
+  #schedule .moreinfo {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 104, ../scss/pages/_schedule.scss */
+  #schedule .moreinfo {
+    font-size: 0.6em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 112, ../scss/pages/_schedule.scss */
+  #schedule #open {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 112, ../scss/pages/_schedule.scss */
+  #schedule #open {
+    font-size: 1.1em;
+    padding-top: 1.5em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 121, ../scss/pages/_schedule.scss */
+  #schedule #lunch {
+    font-size: 1.1em;
+    padding-top: 1.5em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 127, ../scss/pages/_schedule.scss */
+  #schedule #end {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 127, ../scss/pages/_schedule.scss */
+  #schedule #end {
+    font-size: 1.1em;
+    padding-top: 1.5em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 136, ../scss/pages/_schedule.scss */
+  #schedule header h1 {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 141, ../scss/pages/_schedule.scss */
+  #schedule p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 146, ../scss/pages/_schedule.scss */
+  #schedule h3 {
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 152, ../scss/pages/_schedule.scss */
+  #schedule .sessionevent p {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+    font-size: 1.1em;
+    padding-bottom: 0.5em;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #schedule .sessionevent p:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 159, ../scss/pages/_schedule.scss */
+  #schedule .top {
+    padding-top: 2em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 164, ../scss/pages/_schedule.scss */
+  #schedule footer {
+    margin-top: 4em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 164, ../scss/pages/_schedule.scss */
+  #schedule footer {
+    margin-top: 4em;
+  }
+}
+
+/* ------------------------
+body styles
+--------------------------*/
+/*the same style for id="about", "time", "location",and "map" pages*/
+/* line 5, ../scss/pages/_about.scss */
+#about {
+  /*directions page*/
+  /* ----------------------------------
+  google map
+  ----------------------------------- */
+}
+/* line 8, ../scss/pages/_about.scss */
+#about #about p {
+  padding-bottom: 1em;
+}
+/* line 11, ../scss/pages/_about.scss */
+#about .track {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  padding: 3% 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  background-color: #FFF;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+/* line 23, ../scss/pages/_about.scss */
+#about .track h1, #about h2 {
+  font-weight: bold;
+  line-height: 1em;
+  color: #309;
+  font-size: 1.3em;
+  padding-top: 0.2em;
+  font-family: 'Marcellus SC', serif;
+}
+/* line 31, ../scss/pages/_about.scss */
+#about #about {
+  background-color: #ff9;
+}
+/* line 35, ../scss/pages/_about.scss */
+#about .directions .dir {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 3% 3%;
+  background-color: #D5FCC7;
+  opacity: 0.8;
+  border-radius: 6px;
+  clear: both;
+  overflow: hidden;
+}
+/* line 48, ../scss/pages/_about.scss */
+#about #subway h2 {
+  padding-bottom: 0.8em;
+  clear: both;
+  overflow: hidden;
+}
+/* line 54, ../scss/pages/_about.scss */
+#about h3 {
+  font-weight: bold;
+  line-height: 0.8em;
+  color: #F63;
+}
+/* line 59, ../scss/pages/_about.scss */
+#about h4 {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+/* line 63, ../scss/pages/_about.scss */
+#about .trains {
+  margin-top: 10px;
+  padding-bottom: 5px;
+  clear: both;
+  overflow: hidden;
+}
+/* line 69, ../scss/pages/_about.scss */
+#about .trains p {
+  padding: 0;
+  font-size: 0.85em;
+}
+/* line 73, ../scss/pages/_about.scss */
+#about .checkinfo {
+  font-style: italic;
+  font-size: 0.8em;
+}
+/* line 82, ../scss/pages/_about.scss */
+#about #wrapper {
+  margin-bottom: 1.25em;
+}
+/* line 85, ../scss/pages/_about.scss */
+#about .google-map {
+  position: relative;
+  padding-bottom: 105.263157894737%;
+}
+/* line 89, ../scss/pages/_about.scss */
+#about .google-map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 1em;
+}
+@media only screen and (min-width: 45em) {
+  /* line 98, ../scss/pages/_about.scss */
+  #about .date-loc {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #about .date-loc:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 103, ../scss/pages/_about.scss */
+  #about .directions {
+    width: 25%;
+    padding: 0 1%;
+    float: left;
+    margin-top: 0.5em;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #about .directions:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 109, ../scss/pages/_about.scss */
+  #about .sub-bus, #about .path-car {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #about .sub-bus:last-of-type, #about .path-car:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 115, ../scss/pages/_about.scss */
+  #about .map {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+    width: 45%;
+    margin-right: 2em;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #about .map:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 115, ../scss/pages/_about.scss */
+  #about .map {
+    width: 45%;
+    margin-right: 2em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 126, ../scss/pages/_about.scss */
+  #about #bus {
+    width: 50%;
+  }
+  /* line 129, ../scss/pages/_about.scss */
+  #about #bus .dir {
+    padding-bottom: 15.5em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 134, ../scss/pages/_about.scss */
+  #about #subway {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 141, ../scss/pages/_about.scss */
+  #about #path .dir {
+    padding-bottom: 10%;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 139, ../scss/pages/_about.scss */
+  #about #path {
+    width: 50%;
+  }
+  /* line 147, ../scss/pages/_about.scss */
+  #about #path .dir {
+    padding-bottom: 9.5em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 154, ../scss/pages/_about.scss */
+  #about #car .dir {
+    padding-bottom: 7%;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 152, ../scss/pages/_about.scss */
+  #about #car {
+    width: 50%;
+  }
+  /* line 160, ../scss/pages/_about.scss */
+  #about #car .dir {
+    padding-bottom: 8.2em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 166, ../scss/pages/_about.scss */
+  #about #wrapper {
+    padding-bottom: 18.8em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 166, ../scss/pages/_about.scss */
+  #about #wrapper {
+    padding-bottom: 19.7em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 174, ../scss/pages/_about.scss */
+  #about p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 179, ../scss/pages/_about.scss */
+  #about h4 {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 184, ../scss/pages/_about.scss */
+  #about .top {
+    padding-top: 2em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 189, ../scss/pages/_about.scss */
+  #about footer {
+    margin-top: 9em;
+  }
+}
+
+/* line 1, ../scss/pages/_speakers.scss */
+#speakers {
+  /*-------------------------------
+  body styles
+  ---------------------------------*/
+}
+/* line 7, ../scss/pages/_speakers.scss */
+#speakers #writing {
+  background-color: #FFD840;
+}
+/* line 10, ../scss/pages/_speakers.scss */
+#speakers #fineart {
+  background-color: #E93A90;
+}
+/* line 13, ../scss/pages/_speakers.scss */
+#speakers #performing {
+  background-color: #C9C;
+}
+/* line 16, ../scss/pages/_speakers.scss */
+#speakers #mediaArt {
+  background-color: #FD795B;
+}
+/* line 19, ../scss/pages/_speakers.scss */
+#speakers .artItem {
+  font-weight: 900;
+  font-size: 1.5em;
+  color: #FFF;
+  text-align: center;
+  margin-top: 1.5em;
+}
+/* line 27, ../scss/pages/_speakers.scss */
+#speakers .speaker a {
+  color: #f63;
+  font-weight: bold;
+}
+/* line 31, ../scss/pages/_speakers.scss */
+#speakers .top a {
+  color: #fff;
+}
+/* line 34, ../scss/pages/_speakers.scss */
+#speakers .speaker {
+  width: 95%;
+  /* margin:0 auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  padding: 3% 3%;
+  background-color: #FFF;
+  opacity: 0.8;
+  clear: both;
+  overflow: hidden;
+}
+/* line 46, ../scss/pages/_speakers.scss */
+#speakers img {
+  float: left;
+  padding-top: 0.3em;
+  padding-right: 0.5em;
+  border-radius: 5em;
+}
+@media only screen and (min-width: 45em) {
+  /* line 52, ../scss/pages/_speakers.scss */
+  #speakers .speaker {
+    width: 78%;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 52, ../scss/pages/_speakers.scss */
+  #speakers .speaker {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 60, ../scss/pages/_speakers.scss */
+  #speakers .speaker a {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 60, ../scss/pages/_speakers.scss */
+  #speakers .speaker a {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 68, ../scss/pages/_speakers.scss */
+  #speakers p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 73, ../scss/pages/_speakers.scss */
+  #speakers .artItem {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+  }
+}
+
+/* ------------------------
+body styles
+--------------------------*/
+/* line 6, ../scss/pages/_video.scss */
+#video header h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+/* line 10, ../scss/pages/_video.scss */
+#video h1 {
+  font-weight: 900;
+  padding-bottom: 0.3em;
+  color: #f63;
+  font-size: 1em;
+}
+/* line 16, ../scss/pages/_video.scss */
+#video span {
+  font-size: 0.9em;
+  color: #309;
+  font-style: italic;
+}
+/* line 21, ../scss/pages/_video.scss */
+#video .video .box {
+  width: 93%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 3% 3%;
+  background-color: #FFF;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+/* line 30, ../scss/pages/_video.scss */
+#video .videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+/* line 36, ../scss/pages/_video.scss */
+#video .videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (min-width: 45em) {
+  /* line 43, ../scss/pages/_video.scss */
+  #video .video {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+    overflow: hidden;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #video .video:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 43, ../scss/pages/_video.scss */
+  #video .video {
+    width: 50%;
+    padding: 0 1%;
+    float: left;
+  }
+  /* line 17, ../scss/_mixins.scss */
+  #video .video:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 52, ../scss/pages/_video.scss */
+  #video header h1 {
+    font-size: 3em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 57, ../scss/pages/_video.scss */
+  #video h1 {
+    font-size: 1.3em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 62, ../scss/pages/_video.scss */
+  #video p {
+    font-size: 0.96em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 62, ../scss/pages/_video.scss */
+  #video p {
+    font-size: 1em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 70, ../scss/pages/_video.scss */
+  #video .top {
+    padding-top: 2em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 75, ../scss/pages/_video.scss */
+  #video footer {
+    margin-top: 9em;
+  }
+}
+
+/*-----------------------------
+body styles
+------------------------------*/
+/* line 6, ../scss/pages/_sessions.scss */
+#sessions .track {
+  width: 95%;
+  /* margin:0 auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  padding: 3% 3%;
+  background-color: #FFF;
+  opacity: 0.8;
+  border-radius: 6px;
+}
+/* line 17, ../scss/pages/_sessions.scss */
+#sessions .track h1 {
+  font-weight: bold;
+  line-height: 1em;
+  color: #FC0;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Marcellus SC', serif;
+}
+/* line 25, ../scss/pages/_sessions.scss */
+#sessions h2, #sessions h3, #sessions h4, #sessions h5 {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1em;
+  color: #f63;
+}
+/* line 31, ../scss/pages/_sessions.scss */
+#sessions .presentername {
+  text-align: right;
+  margin-top: -0.7em;
+  font-size: 0.9em;
+}
+/* line 36, ../scss/pages/_sessions.scss */
+#sessions .presentername a {
+  color: #f63;
+}
+/* line 39, ../scss/pages/_sessions.scss */
+#sessions .session {
+  margin-bottom: 2em;
+}
+/* line 42, ../scss/pages/_sessions.scss */
+#sessions span {
+  color: #000;
+  font-style: italic;
+  font-size: 0.8em;
+  margin-left: 1%;
+}
+/* line 48, ../scss/pages/_sessions.scss */
+#sessions .image {
+  margin-top: 0.6em;
+}
+/* line 51, ../scss/pages/_sessions.scss */
+#sessions .cite {
+  text-align: right;
+  font-size: 0.9em;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+/* line 58, ../scss/pages/_sessions.scss */
+#sessions .cite a {
+  color: #Fc0;
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 61, ../scss/pages/_sessions.scss */
+  #sessions h2 {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 66, ../scss/pages/_sessions.scss */
+  #sessions .track h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (min-width: 45em) {
+  /* line 71, ../scss/pages/_sessions.scss */
+  #sessions .track {
+    width: 78%;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 71, ../scss/pages/_sessions.scss */
+  #sessions .track {
+    width: 68%;
+  }
+}
+/* line 79, ../scss/pages/_sessions.scss */
+#sessions p {
+  font-size: 1em;
+}

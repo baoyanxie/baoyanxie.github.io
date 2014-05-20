@@ -1,0 +1,81 @@
+/* ------------------------
+body styles
+--------------------------*/
+#video{
+
+header h1{
+	font-size:2.5em;
+	color:#fff;
+}
+h1{
+	font-weight:900;
+	padding-bottom:0.3em;
+	color:#f63;
+	font-size:1em;
+}
+span{
+	font-size:0.9em;
+	color:#309;
+	font-style: italic;
+}
+.video .box{
+	width:93%;
+	margin:0 auto;
+	margin-bottom:20px;
+	padding:3% 3%;
+	background-color:#FFF;
+	opacity:0.8;
+	border-radius:6px; 
+}
+.videoWrapper{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px; 
+    height: 0;
+}
+.videoWrapper iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.video{
+	@include breakpoint(medium){
+		@include col(3,6);
+		overflow: hidden;
+	}
+	@include breakpoint(large){
+		@include col(3,6);
+	}
+}
+header h1{
+	@include breakpoint(large){
+		font-size: 3em;
+	}
+}
+h1{
+	@include breakpoint(medium){
+		font-size: 1.3em;
+	}
+}
+p{
+	@include breakpoint(medium){
+		font-size: 0.96em;
+	}
+	@include breakpoint(large){
+		font-size: 1em;
+	}
+}
+.top{
+	@include breakpoint(medium){
+		padding-top: 2em;
+	}
+}
+footer{
+	@include breakpoint(medium){
+		margin-top:9em;
+	}
+}
+}//video
+

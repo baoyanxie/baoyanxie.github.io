@@ -1,0 +1,80 @@
+//Some Responsive styles
+
+//border-box model
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+	@include box-sizing(border-box);
+}
+
+@import url(http://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(http://fonts.googleapis.com/css?family=Marcellus+SC);
+
+/* This is not the only thing you should do for responsive images, but it is a start. Remember that this style will not make your image or video grow any bigger than the original so you have to put in the largest version you will need.
+That can be a performance issue since small screens will download the same image as large ones.
+This article by Luke Wroblewski goes into more detail about that: http://www.lukew.com/ff/entry.asp?1851
+*/
+img,video{
+  width: auto; 
+  max-width: 100%; 
+  height: auto;
+}
+
+body{
+	width:100%;
+	margin:0 auto;
+	line-height:1.5;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url(../images/00.jpg);
+}
+p{
+	font-size:0.9em;
+	padding-top:0.5em;
+	line-height:1.5em;
+}
+header h1{
+	text-align:center;
+	font-weight:bold;
+	padding-top:1em;
+	font-size:2.5em;
+	color:#fff;
+	line-height:1.2em;
+	font-family:'Abril Fatface'; 
+}
+header h1{
+	@include breakpoint(medium){
+		margin-bottom:1em;
+		margin-top: 0.5em;
+	}
+	@include breakpoint(large){
+		font-size: 3em;
+	}
+}
+/*----------------------------
+footer styles
+-----------------------------*/
+footer{
+	text-align:center;
+	font-size:0.8em;
+	color:#fff;
+	margin-bottom:0.8em;
+}
+footer{
+	@include breakpoint(medium){
+      border-top:20px solid #F99;
+	}
+	@include breakpoint(large){
+		border-top:20px solid #F99;
+	}
+}
+#bmcc{
+	font-size:2.2em;
+	font-weight:bold;
+	margin-top:0.5em;
+	font-family:'Abril Fatface'; 
+}
+#address{
+	font-size: 1.2em;
+	font-weight:bold;
+	margin-top:-0.5em;
+	margin-bottom:1em;
+}

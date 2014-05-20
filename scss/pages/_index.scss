@@ -1,0 +1,190 @@
+/*---------------------------------
+body styles
+---------------------------------*/
+#index{
+
+
+.home{
+	width:95%;
+	/* margin:0 auto; */
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:15px;
+	padding:3% 3%;
+	opacity:0.8;
+	border-radius:6px;
+}
+h4{
+	text-align:center;
+	font-weight:900;
+	font-size:1.8em;
+	font-family: 'Marcellus SC', serif;
+	color:#309;
+}
+
+/* intrduction page*/
+#intrduction{
+    background-color:#FF9;
+	font-size:1.1em;		
+}
+strong{
+	font-weight:900;
+}
+.info{
+	padding-bottom:1.2em;
+}
+h2{
+	font-weight:900;
+	line-height:0.5em;
+	color:#f63;
+}
+
+/*featuredspeakers page*/
+#featuredspeakers{
+	background-color:#FFF;
+	overflow: hidden;
+}
+#featuredspeakers p{
+	padding-top:1.6em;
+}
+.speaker{
+	padding-top:0.6em;
+	padding-bottom:4em;
+    border-bottom:2px solid #FC6;
+}
+.wright{
+	padding-bottom:5em;
+}
+.pallis{
+	padding-bottom:1em;
+	border-bottom:#fff;
+}
+img{
+	float:left;
+	padding-top:0.4em;
+	padding-right:0.5em;
+	border-radius:5em;
+}
+h3{
+	color:#f63;
+	font-weight:900;
+	text-align:center;
+}
+span{
+	font-style:italic;
+	font-size:0.9em;
+	font-weight:500;
+}
+
+/*workshop page*/
+#workshop{
+	background-color:#CFC;
+	clear:both;
+	overflow:hidden;
+}
+h5{
+	color:#f63;
+	font-weight:900;
+	line-height:1em;
+}
+.artItem{
+	padding-bottom:1em;
+	padding-top:0.5em;
+}
+
+
+
+//breakpoint-layout//
+#intrduction{
+	overflow:hidden;
+	@include clearfix();
+	@include pie-clearfix();
+}
+.info{
+	@include breakpoint(medium){
+			@include col(1,2);
+	}
+	@include breakpoint(large){
+			@include col(1,3);
+	}
+}
+.date{
+	@include breakpoint(medium){
+		padding-bottom:1em;
+	}
+	@include breakpoint(large){
+		padding-left:5em;
+		padding-top: 2em;
+	}
+}
+.location{
+	@include breakpoint(large){
+		padding-top:2em;
+	}
+}
+
+
+.speaker{
+	@include breakpoint(medium){
+		@include col(2,4);
+		padding-bottom:1.5em;
+	}
+	@include breakpoint(large){
+		@include col(1,4);
+		border-left: 2px solid #FC6;
+		border-bottom:#fff;
+	}
+}
+.pallis{
+	@include breakpoint(medium){
+		border-bottom:2px solid #FC6;
+    }
+    @include breakpoint(large){
+    	border-bottom:#fff;
+    	border-right:2px solid #FC6;
+    }
+}
+.artItem{
+	@include breakpoint(large){
+		@include col(2,4);
+	}
+}
+
+h4{
+	@include breakpoint(medium){
+         margin-bottom: 0.5em;
+	}
+	@include breakpoint(large){
+		margin-bottom: 0.5em;
+		margin-top:-0.5em;
+	}
+}
+h5{
+	@include breakpoint(medium){
+		font-size: 1.2em;
+	}
+	@include breakpoint(large){
+		font-size: 1.3em;
+		padding-top:1em;
+	}
+}
+
+h2{
+	@include breakpoint(large){
+		font-size:1.25em;
+	}
+}
+.speaker p{
+	@include breakpoint(large){
+		font-size: 0.9em;
+	}
+}
+p{
+	@include breakpoint(medium){
+		font-size: 1em;
+	}
+	@include breakpoint(large){
+		font-size: 1.12em;
+	}
+}
+}//index

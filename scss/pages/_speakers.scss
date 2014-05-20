@@ -1,0 +1,79 @@
+#speakers{
+
+
+/*-------------------------------
+body styles
+---------------------------------*/
+#writing{
+	background-color:#FFD840;
+}
+#fineart{
+	background-color:#E93A90;
+}
+#performing{
+	background-color:#C9C;
+}
+#mediaArt{
+	background-color:#FD795B;
+}
+.artItem{
+	font-weight:900;
+	font-size:1.5em;
+	color:#FFF;
+	text-align:center;
+    margin-top:1.5em;
+}
+
+.speaker a{
+	color:#f63;
+	font-weight: bold;
+}
+.top a{
+	color:#fff;
+}
+.speaker{
+	width:95%;
+	/* margin:0 auto; */
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:5px;
+	padding:3% 3%;
+	background-color:#FFF;
+	opacity:0.8;
+	clear:both;
+   overflow: hidden;
+}
+img{
+	float:left;
+	padding-top:0.3em;
+	padding-right:0.5em;
+	border-radius:5em;
+}
+.speaker{
+	@include breakpoint(medium){
+		width:78%;
+	}
+	@include breakpoint(large){
+		width:70%;
+	}
+}
+.speaker a{
+	@include breakpoint(medium){
+		font-size: 1.1em;
+	}
+	@include breakpoint(large){
+		font-size:1.2em;
+	}
+}
+p{
+	@include breakpoint(large){
+		font-size: 1em;
+	}
+}
+.artItem{
+	@include breakpoint(large){
+		padding-top:0.3em;
+		padding-bottom:0.3em;
+	}
+}
+}//speakers

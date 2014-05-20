@@ -1,0 +1,120 @@
+/* ---------------------------------
+Navigation Styles
+----------------------------------- */
+
+/* 
+hide 
+display:none;
+
+
+show
+display:block;
+
+*/
+
+#main_nav{
+  clear:both;
+  overflow:hidden;
+}  
+
+#main_nav ul{
+  list-style: none;
+}
+
+#main_nav li a{
+  display:block;
+  color:#FFF;
+  background-color:#F99;
+  text-transform: uppercase;
+  padding: 0.4em; /* 10/16 */
+  text-decoration:none;
+  border-bottom:1px solid;
+  font-weight:800; 
+}
+
+#main_nav li a:hover{
+  color:#ff9840;
+  background-color: #fff;
+}
+  
+/* menu button */
+.menu a{
+  padding:0.5em 0.625em; /*10/16 */
+  background-color:#F99;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+}
+#menu-button{
+	margin-bottom:1.5em;
+	margin-top:1em;
+}
+.top a{
+  padding:0.5em 0.625em; /*10/16 */
+  background-color:#F99;
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+}
+.top{
+	margin-top:3em;
+	margin-bottom:-0.75em;
+  clear: both;
+}
+.top{
+  @include breakpoint(medium){
+    margin-bottom:-3.5em;
+  }
+  @include breakpoint(large){
+    margin-bottom:-3.5em;
+  }
+}
+.container{
+	margin-top:1em;
+  clear: both;
+}
+@media only screen and (min-width:42.75em) {
+ .menu{
+    display:none;
+  }
+  
+/* move main_nav to top of the screen */
+  #main_nav{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+   overflow:hidden;
+    background-color: #F99;
+  }
+  
+  #main_nav li{
+    display:inline;
+    line-height:1em;
+  }
+  #main_nav li a{
+    float:left;
+    padding: 0.9375em; /* 10/16  and  15/16 */
+    border-bottom: none;
+  }
+#main_nav li a{
+  @include breakpoint(large){
+    padding-left:8em;
+  }
+}
+a{
+  @include breakpoint(large){
+    font-size:1em;
+  }
+}
+/* hide the link to top in the nav */
+  #main_nav li a.top{
+    display: none;
+  }
+  
+ /* move the rest of the page down accordingly */
+  .container{
+   margin-top: 3.75em;  /*60 / 16 */ 
+  }
+    
+} 

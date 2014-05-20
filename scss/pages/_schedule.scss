@@ -1,0 +1,172 @@
+
+/*----------------------------
+body styles
+----------------------------*/
+#schedule{
+
+.schedule{
+	width:95%;
+	/* margin:0 auto; */
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	padding:3% 3%;
+    padding-bottom:1em;
+	background-color:#FFF;
+	opacity:0.8;
+	border-radius:6px;
+}
+header h1{
+	font-size:2.5em;
+	color:#fff;
+}
+h1,h5{
+	font-weight:900;
+	font-size:1.3em;
+	color:#309;
+}
+
+/*open page*/
+#open{
+	font-weight:900;
+	background-color:#FF9;
+}
+#open p{
+	font-size:1em;
+}
+h2{
+	font-weight:900;
+	font-size:1em;
+	color:#309;
+}
+
+/*session page*/
+.sessionevent a{
+	color:#000;
+
+}
+.schedule p span{
+	display:block;
+	font-size:0.95em;
+	color:#f63;
+}
+h3{
+	font-weight:900;
+	font-size:1em;
+	color:#309;
+}
+h3 span{
+	color:#f63;
+}
+strong{
+	font-weight:900;
+}
+.moreinfo{
+	text-align:right;
+	font-size:0.8em;
+	font-style:italic;
+	color:#B95FF5;
+}
+/*lunch page*/
+#lunch{
+	font-weight:900;
+	text-align:center;
+	background-color:#CFC;
+}
+#lunch p{
+	font-size:1em;
+}
+h4{
+	font-weight:900;
+	font-size:1.3em;
+	text-align:center;
+	color:#309;
+}
+
+/*end page*/
+#end{
+	font-weight:900;
+	background-color:#FF9;
+}
+#end p{
+	font-size:1em;
+}
+.schedule{
+	@include breakpoint(medium){
+		width:78%;
+	}
+	@include breakpoint(large){
+		width:68%;
+		clear: both;
+		overflow: hidden;
+	}
+}
+.moreinfo{
+	@include breakpoint(medium){
+		font-size: 0.9em;
+	}
+	@include breakpoint(large){
+		font-size: 0.6em;
+	}
+}
+#open{
+	@include breakpoint(medium){
+		text-align: center;
+	}
+	@include breakpoint(large){
+		font-size:1.1em;
+		padding-top:1.5em;
+	}
+}
+#lunch{
+	@include breakpoint(large){
+		font-size: 1.1em;
+		padding-top:1.5em;
+	}
+}
+#end{
+	@include breakpoint(medium){
+		text-align: center;
+	}
+	@include breakpoint(large){
+		font-size: 1.1em;
+		padding-top:1.5em;
+	}
+}
+header h1{
+	@include breakpoint(large){
+		font-size: 3em;
+	}
+}
+p{
+	@include breakpoint(medium){
+		font-size: 1em;
+	}
+}
+h3{
+	@include breakpoint(large){
+		font-size: 1.2em;
+		padding-bottom:0.5em;
+	}
+}
+.sessionevent p{
+	@include breakpoint(large){
+		@include col(1,2);
+         font-size:1.1em;
+         padding-bottom:0.5em;
+	}
+}
+.top{
+	@include breakpoint(medium){
+		padding-top: 2em;
+	}
+}
+footer{
+	@include breakpoint(medium){
+		margin-top:4em;
+	}
+	@include breakpoint(large){
+		margin-top: 4em;
+	}
+}
+}//schedule
