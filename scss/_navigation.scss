@@ -61,14 +61,6 @@ display:block;
 	margin-bottom:-0.75em;
   clear: both;
 }
-.top{
-  @include breakpoint(medium){
-    margin-bottom:-3.5em;
-  }
-  @include breakpoint(large){
-    margin-bottom:-3.5em;
-  }
-}
 .container{
 	margin-top:1em;
   clear: both;
