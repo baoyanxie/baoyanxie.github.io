@@ -157,19 +157,6 @@ h3{
 	}
 }
 .top{
-	@include breakpoint(medium){
-		padding-top: 2em;
-	}
-}
-footer{
-	@include breakpoint(medium){
-		margin-top:4em;
-	}
-	@include breakpoint(large){
-		margin-top: 4em;
-	}
-}
-.top{
   @include breakpoint(medium){
     margin-top:5em;
     margin-bottom:-3.5em;
